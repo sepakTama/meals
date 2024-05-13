@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:meals/models/meal.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
@@ -83,7 +82,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
       // The riverpod package automatically extracts the "state" property value from the notifier class that belongs to the provider. Hence, ref.watch() yields List<Meal> here (instead of the Notifier class).
 
       activePage = MealsScreen(
-        meals: _favoriteMeals,
+        meals: favoriteMeals,
       );
       activePageTitle = 'Your Favorites';
     }

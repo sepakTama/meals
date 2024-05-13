@@ -14,8 +14,6 @@ class FavoriteMealsNotifier extends StateNotifier<List<Meal>> {
       state = [...state, meal]; // L1 = [1, 2] L2 - [...L1, 3] <- [1, 2, 3]
       return true;
     }
-
-    state = [];
   }
 }
 
